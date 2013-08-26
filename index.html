@@ -1,0 +1,85 @@
+---
+layout: default
+---
+	<div class="about">
+		<div class="profile_pic">
+		</div>
+		<h1>About</h1>
+		<p>Computer Science undergraduate, Web Developer & Designer. Sometimes I write about 'interesting' things on my blog, further down. If you wanna say hi, hire me, or just ask me something, do so via <a href="mailto:me@waltercarvalho.com">email</a>. Alternatively you can keep in touch the easy-way <a href="http://www.twitter.com/waltercfilho"><i class='icon-twitter'></i></a>.</p>
+	</div>
+	<div class='twitter'>
+		<blockquote><span id="twitter_update_list"><li><p><i class='icon-spinner icon-spin icon-large'></i></p></li></span></blockquote>
+	</div>
+	<div class="blog">
+		<h1>Bloggin'</h1>
+		{% assign first_post = site.posts.first %}
+		<div class="post">
+			<small>on {{ first_post.date | date: "%B %e, %Y" }}</small>
+			<h2>{{first_post.title}}</h2>
+			{{ first_post.content | strip_html | truncatewords: 50 }}<a href="{{ first_post.url }}"> read more &rarr;</a>
+		</div>
+		<h3>Even more from the blog...</h3>
+		{% for post in site.posts limit_posts:5 %}
+			<p><a href="{{ post.url }}">{{ post.title }}</a> <small>on {{ post.date | date: "%B %e, %Y" }}</small></p>
+		{% endfor %}
+	</div>
+	<div class="portfolio">
+		<h1>Work &amp; Portfolio</h1>
+		<p>I'm currently working part-time as a for a small company, developing, designing &amp; creating. During summmer I'll be an intern <a href="http://www.twitter.com/eysyslimited"> @eysyslimited</a>. You can find some of my work on <a href="https://github.com/waltervascarvalho"><i class='icon-github'></i></a></p>
+		<div class="examples">
+			<div class="column firstcol">
+				<div class='row firstrow'>
+					<div class="thumb">
+						<a href="http://anunci.pagodabox.com"><img src="img/anunci.png"></a>
+					</div>
+					<div class="info">
+						<p>Anunci<sup>Concept</sup>	Design &amp; Implementation. Laravel.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="thumb">
+						<a href="http://www.polianabandeira.com"><img src="img/pb.png"></a>
+					</div>
+					<div class="info">
+						<p>Design &amp; Implementation. Laravel.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="thumb">
+						<a href="img/moenda.png"><img src="img/moenda.png"></a>
+					</div>
+					<div class="info">
+						<p>Design &amp; Implementation.</p>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="row firstrow">
+					<div class="thumb">
+						<a href="img/mark.png"><img src="img/mark.png"></a>
+					</div>
+					<div class="info">
+						<p>Design &amp; Implementation.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="thumb">
+						<a href="img/newlogo.png"><img src="img/logo_thumb.png"></a>
+					</div>
+					<div class="info">
+						<p>Logo design for new website.</p>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="row firstrow">
+					<div class="thumb">
+						<a href="https://github.com/waltervascarvalho/DreadfulFish"><img src="img/dreadfulfish.png"></a>
+					</div>
+					<div class="info">
+						<p>Design &amp; Implementation. Coop with <a href="http://www.twitter.com/rob_hawkins">@rob_hawkins</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
